@@ -71,11 +71,11 @@ function showWeather(response) {
 
   let maxTemperature = Math.round(response.data.main.temp_max);
   let maxtemp = document.querySelector("#maxtemp");
-  maxtemp.innerHTML = `${maxTemperature}`;
+  maxtemp.innerHTML = `${maxTemperature}°`;
 
   let minTemperature = Math.round(response.data.main.temp_min);
   let mintemp = document.querySelector("#mintemp");
-  mintemp.innerHTML = `${minTemperature} `;
+  mintemp.innerHTML = `${minTemperature}°`;
 
   let feelsLike = Math.round(response.data.main.feels_like);
   let feel = document.querySelector("#feelslike");
