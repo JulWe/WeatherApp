@@ -111,8 +111,14 @@ function getCurrentPosition(position) {
   axios.get(apiUrl).then(showWeather);
 }
 
+function getCurrent(event) {
+  event.preventDefault();
+
+  navigator.geolocation.getCurrentPosition(getCurrentPosition);
+}
+
 let button = document.querySelector(".current");
-button.addEventListener("click", getCurrentPosition);
+button.addEventListener("click", getCurrent);
 
 //function changeToCelsius(event) {
 //event.preventDefault();
